@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Iniciando build de la invitación..."
+    build:
+      commands:
+        - echo "Construyendo sitio estático..."
+        - echo "No se requieren comandos de build para HTML/CSS/JS"
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/* 
