@@ -3,8 +3,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #FAF7F3;
-  color: #222;
+  background: #FCEFCB;
+  color: #A86523;
   /* Cambia la imagen de fondo a AVIF */
   background-image: url('imagenes/background.avif');
   background-size: cover;
@@ -14,7 +14,7 @@ body {
 }
 
 .seccion {
-  background: #FAF7F3; /* Color actualizado */
+  background: #FCEFCB; /* Color actualizado */
   border-radius: 16px;
   margin: 0 auto 40px auto;
   width: 90vw;           /* Cambiado a 90% del ancho de la pantalla */
@@ -57,7 +57,7 @@ body {
 
 .subtitulo-script {
   font-size: 3rem; /* Antes 2.4rem, ahora 25% más grande */
-  color: #A67C6B;
+  color: #E9A319;
   margin: 0 0 16px 0;
   font-family: 'Great Vibes', cursive;
 }
@@ -74,7 +74,7 @@ body {
   font-size: 3rem;
   letter-spacing: 0.2em;
   margin: 16px 0;
-  color: #6B5B4B;
+  color: #A86523;
   font-family: 'Playfair Display', serif;
 }
 
@@ -86,20 +86,20 @@ body {
 .fecha-destacada .fecha-sep {
   font-size: 2.5rem;
   margin: 0 12px;
-  color: #DCC5B2;
+  color: #E9A319;
 }
 
 .fecha-destacada .fecha-texto {
   font-size: 1.3rem;
-  color: #6B5B4B;
+  color: #A86523;
   margin-top: 8px;
 }
 
 /* Botón estilo borde */
 .boton {
   display: inline-block;
-  border: 2px solid #D9A299;
-  color: #D9A299;
+  border: 2px solid #A86523;
+  color: #A86523;
   background: transparent;
   padding: 12px 32px;
   border-radius: 8px;
@@ -110,7 +110,7 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 .boton:hover {
-  background: #D9A299;
+  background: #A86523;
   color: #fff;
 } 
 
@@ -204,7 +204,7 @@ body {
 .titulo-40 .numero,
 .titulo-40 .nombre,
 .subtitulo-script {
-  color: #A67C6B; /* Un tono más oscuro que #D9A299 */
+  color: #A86523; /* Un tono más oscuro que #D9A299 */
 } 
 
 /* Animación de entrada para el encabezado */
@@ -249,14 +249,14 @@ body {
 .invitados-label {
   font-family: 'Great Vibes', cursive;
   font-size: 2.4rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 400;
 }
 
 .invitados-numero {
   font-family: 'Playfair Display', serif;
   font-size: 4.5rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 700;
   line-height: 1;
 }
@@ -326,7 +326,7 @@ body {
 .detalles-titulo .detalles-label {
   font-family: 'Great Vibes', cursive;
   font-size: 2.4rem;      /* Más grande nuevamente */
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 400;
   display: block;
   margin-bottom: 2.2em;   /* Más espacio debajo del título */
@@ -343,7 +343,7 @@ body {
 .detalles-lista li {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem; /* Reducido de 1.5rem a 1.1rem */
-  color: #A67C6B;
+  color: #A86523;
   margin-bottom: 0.8em;
   text-align: left;
 }
@@ -351,7 +351,7 @@ body {
 .detalles-item-label {
   font-family: 'Great Vibes', cursive;
   font-size: 1.1em; /* Reducido de 1.5em a 1.1em */
-  color: #A67C6B;
+  color: #E9A319;
   font-weight: 400;
   margin-right: 0.5em;
 }
@@ -376,7 +376,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #A67C6B;
+  color: #A86523;
   transition: transform 0.2s;
 }
 
@@ -387,7 +387,7 @@ body {
 .texto-mapa {
   font-family: 'Great Vibes', cursive;
   font-size: 1.1em;
-  color: #A67C6B;
+  color: #E9A319;
   font-weight: 400;
   margin-top: 8px;
 }
@@ -417,7 +417,7 @@ body {
 .mensaje-titulo .mensaje-label {
   font-family: 'Great Vibes', cursive;
   font-size: 2.4rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 400;
   display: block;
   margin-bottom: 2.2em;
@@ -427,7 +427,7 @@ body {
 .mensaje-contenido p {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: #A67C6B;
+  color: #A86523;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
@@ -459,7 +459,7 @@ body {
 .rsvp-titulo .rsvp-label {
   font-family: 'Great Vibes', cursive;
   font-size: 2.4rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 400;
   display: block;
   margin-bottom: 2.2em;
@@ -469,7 +469,7 @@ body {
 .rsvp-contenido p {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: #A67C6B;
+  color: #A86523;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 1.5em auto;
@@ -501,7 +501,7 @@ body {
 .info-titulo .info-label {
   font-family: 'Great Vibes', cursive;
   font-size: 2.4rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 400;
   display: block;
   margin-bottom: 2.2em;
@@ -518,7 +518,7 @@ body {
 .info-contenido li {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
-  color: #A67C6B;
+  color: #A86523;
   margin-bottom: 0.8em;
   text-align: left;
 }
@@ -526,7 +526,7 @@ body {
 .info-item-label {
   font-family: 'Great Vibes', cursive;
   font-size: 1.1em;
-  color: #A67C6B;
+  color: #E9A319;
   font-weight: 400;
   margin-right: 0.5em;
 }
@@ -540,7 +540,7 @@ body {
 .contador-titulo {
   font-family: 'Great Vibes', cursive;
   font-size: 1.8rem;
-  color: #A67C6B;
+  color: #A86523;
   margin-bottom: 1.5em;
 }
 
@@ -563,7 +563,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #A67C6B;
+  color: #A86523;
   line-height: 1;
   margin-bottom: 0.3em;
 }
@@ -571,7 +571,7 @@ body {
 .contador-label {
   font-family: 'Playfair Display', serif;
   font-size: 0.9rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -581,7 +581,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #A67C6B;
+  color: #E9A319;
   margin-top: -0.5em;
 }
 
@@ -634,7 +634,7 @@ body {
 .itinerario-titulo .itinerario-label {
   font-family: 'Great Vibes', cursive;
   font-size: 2.4rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 400;
   display: block;
   margin-bottom: 2.2em;
@@ -658,7 +658,7 @@ body {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #D9A299;
+  background-color: #A86523;
   z-index: 1;
   transform: translateX(-50%);
 }
@@ -720,18 +720,18 @@ body {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-color: #D9A299;
+  background-color: #E9A319;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 0 4px #FAF7F3;
+  box-shadow: 0 0 0 4px #FCEFCB;
 }
 
 .itinerario-icono img {
   width: 60%;
   height: 60%;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(32%) sepia(80%) saturate(1000%) hue-rotate(20deg) brightness(95%) contrast(90%);
 }
 
 .itinerario-detalle {
@@ -741,7 +741,7 @@ body {
 .itinerario-nombre {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: #A67C6B;
+  color: #A86523;
   font-weight: 700;
   display: block;
   margin-bottom: 0.2em;
@@ -750,7 +750,7 @@ body {
 .itinerario-hora {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
-  color: #A67C6B;
+  color: #A86523;
   display: block;
 }
 

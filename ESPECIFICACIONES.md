@@ -28,4 +28,41 @@ Desarrollar una invitación digital personalizada para el evento de Johnatan, qu
 
 ---
 
+### Personalización dinámica de la invitación
+
+- La invitación permite personalización dinámica mediante parámetros en la URL:
+  - `invitados`: número de personas invitadas (se refleja en la sección de invitados)
+  - `nombre`: nombre del destinatario (opcional)
+- Ejemplo de URL personalizada:
+  - `https://tusitio.amplifyapp.com/?invitados=5&nombre=Familia%20Pérez`
+- El sitio detecta estos parámetros y los muestra automáticamente en la invitación.
+
 *Agrega aquí cualquier requerimiento adicional o comentario relevante.* 
+
+---
+
+### Implementación técnica de la personalización dinámica
+
+- Se utiliza JavaScript para leer los parámetros `invitados` y `nombre` de la URL y reflejarlos en la invitación.
+- Fragmento de código:
+
+```js
+function personalizarInvitacion() {
+  const params = new URLSearchParams(window.location.search);
+  const invitados = params.get('invitados');
+  const nombre = params.get('nombre');
+  if (invitados && !isNaN(invitados)) {
+    document.getElementById('invitados-numero').textContent = invitados;
+  }
+  if (nombre) {
+    document.getElementById('invitados-nombre').textContent = decodeURIComponent(nombre);
+  }
+}
+personalizarInvitacion();
+```
+
+- En el HTML debe existir:
+```html
+<span class="invitados-numero anim-text" id="invitados-numero">2</span>
+<span id="invitados-nombre"></span>
+``` 

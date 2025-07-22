@@ -34,4 +34,39 @@
 
 ---
 
+### Personalización visual dinámica
+
+- El diseño permite mostrar el número de invitados y el nombre del destinatario de forma personalizada usando parámetros en la URL.
+- Ejemplo: `https://tusitio.amplifyapp.com/?invitados=3&nombre=Familia%20Gomez`
+- El número de invitados y el nombre se reflejan automáticamente en la sección correspondiente de la invitación.
+
 *Agrega aquí cualquier otra referencia o idea visual que quieras considerar para el diseño de la invitación.* 
+
+---
+
+### Ejemplo visual y código para personalización dinámica
+
+- El diseño permite mostrar el número de invitados y el nombre del destinatario usando parámetros en la URL.
+- Ejemplo de URL: `https://tusitio.amplifyapp.com/?invitados=3&nombre=Familia%20Gomez`
+- Fragmento de código JavaScript:
+
+```js
+function personalizarInvitacion() {
+  const params = new URLSearchParams(window.location.search);
+  const invitados = params.get('invitados');
+  const nombre = params.get('nombre');
+  if (invitados && !isNaN(invitados)) {
+    document.getElementById('invitados-numero').textContent = invitados;
+  }
+  if (nombre) {
+    document.getElementById('invitados-nombre').textContent = decodeURIComponent(nombre);
+  }
+}
+personalizarInvitacion();
+```
+
+- En el HTML debe existir:
+```html
+<span class="invitados-numero anim-text" id="invitados-numero">2</span>
+<span id="invitados-nombre"></span>
+``` 

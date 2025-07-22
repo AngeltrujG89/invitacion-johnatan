@@ -36,4 +36,38 @@
 
 ---
 
+## Ejemplo de personalización dinámica en la invitación
+
+Puedes personalizar la invitación usando parámetros en la URL para definir el número de invitados y el nombre del destinatario. Ejemplo:
+
+```
+https://tusitio.amplifyapp.com/?invitados=3&nombre=Familia%20Gomez
+```
+
+- **invitados**: Número de personas invitadas (se mostrará en la sección de invitados)
+- **nombre**: Nombre del destinatario (opcional, se puede mostrar en la invitación)
+
+### Fragmento de código JavaScript utilizado:
+
+```js
+function personalizarInvitacion() {
+  const params = new URLSearchParams(window.location.search);
+  const invitados = params.get('invitados');
+  const nombre = params.get('nombre');
+  if (invitados && !isNaN(invitados)) {
+    document.getElementById('invitados-numero').textContent = invitados;
+  }
+  if (nombre) {
+    document.getElementById('invitados-nombre').textContent = decodeURIComponent(nombre);
+  }
+}
+personalizarInvitacion();
+```
+
+En el HTML, asegúrate de tener:
+```html
+<span class="invitados-numero anim-text" id="invitados-numero">2</span>
+<span id="invitados-nombre"></span>
+```
+
 *Agrega aquí cualquier otro elemento que desees incluir en la invitación.* 
