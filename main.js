@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Cambiar número de invitados según parámetro de la URL
   const urlParams = new URLSearchParams(window.location.search);
-  const invitadosParam = urlParams.get('invitados');
+  const invitadosParam = urlParams.get('g');
   if (invitadosParam) {
     document.querySelectorAll('.invitados-numero').forEach(el => {
       el.textContent = invitadosParam;
