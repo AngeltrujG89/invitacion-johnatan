@@ -46,11 +46,10 @@ body {
 }
 
 .titulo-40 .numero {
-  font-size: 7.5rem; /* Antes 6rem, ahora 25% más grande */
+  font-size: 10rem; /* Más grande */
   color: #A67C6B;
   font-weight: 700;
   line-height: 1;
-  /* Se elimina la fuente Great Vibes, usará la fuente principal */
   font-family: 'Playfair Display', serif;
 }
 
