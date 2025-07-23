@@ -52,13 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (invitadosNumero) invitadosNumero.classList.add('animar-entrada');
   if (invitadosLabels[1]) invitadosLabels[1].classList.add('animar-entrada');
   
-  // Cambiar número de invitados según parámetro de la URL
+  // Cambiar número de invitados según parámetro de la URL (Base64)
   const urlParams = new URLSearchParams(window.location.search);
   const invitadosParam = urlParams.get('g');
   if (invitadosParam) {
-    document.querySelectorAll('.invitados-numero').forEach(el => {
-      el.textContent = invitadosParam;
-    });
+    let decoded = '';
+    try {
+      decoded = atob(invitadosParam);
+    } catch (e) {
+      decoded = '';
+    }
+    if (/^\d+$/.test(decoded)) {
+      document.querySelectorAll('.invitados-numero').forEach(el => {
+        el.textContent = decoded;
+      });
+    }
   }
 
   // Contador regresivo
