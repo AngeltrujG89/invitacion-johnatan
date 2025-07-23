@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cambiar número de invitados según parámetro de la URL (Base64)
   const urlParams = new URLSearchParams(window.location.search);
   const invitadosParam = urlParams.get('g');
-  let invitadosValue = 'null';
+  let invitadosValue = '0';
   if (invitadosParam) {
     let decoded = '';
     try {
