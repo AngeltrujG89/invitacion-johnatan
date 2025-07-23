@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cambiar número de invitados según parámetro de la URL (Base64)
   const urlParams = new URLSearchParams(window.location.search);
   const invitadosParam = urlParams.get('g');
+  let invitadosValue = 'null';
   if (invitadosParam) {
     let decoded = '';
     try {
@@ -63,11 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
       decoded = '';
     }
     if (/^\d+$/.test(decoded)) {
-      document.querySelectorAll('.invitados-numero').forEach(el => {
-        el.textContent = decoded;
-      });
+      invitadosValue = decoded;
     }
   }
+  document.querySelectorAll('.invitados-numero').forEach(el => {
+    el.textContent = invitadosValue;
+  });
 
   // Contador regresivo
   function actualizarContador() {
