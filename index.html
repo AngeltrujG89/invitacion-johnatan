@@ -179,20 +179,33 @@
 		<br>
 		<br>
 		<br>
-		<div class="rsvp-titulo">
-            <span class="rsvp-label anim-text">Confirma tu Asistencia</span>
-        </div>
+		
         <div class="rsvp-contenido">
             <p class="anim-text">Por favor, confirma tu asistencia</p>
-            <a href="mailto:johnatan@email.com?subject=Confirmación%20de%20asistencia" class="boton anim-text">Confirmar
+            <a href="#" id="abrir-modal-confirmacion" class="boton anim-text">Confirmar
                 Asistencia</a>
         </div>
 	</div>
 
 	<div class="confirmar-asistencia-final" style="text-align:center; margin: 48px 0 0 0;">
-		<a href="https://wa.me/5215551234567?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20invitaci%C3%B3n%20de%20Johnatan." target="_blank" class="boton anim-text">
+		<a href="#" id="abrir-modal-confirmacion" class="boton anim-text">
 			Confirmar Asistencia
 		</a>
+	</div>
+
+	<!-- Modal de confirmación de asistencia -->
+	<div id="modal-confirmacion" class="modal-confirmacion" style="display:none;">
+		<div class="modal-contenido">
+			<span class="modal-cerrar" id="cerrar-modal-confirmacion">&times;</span>
+			<h2>Confirmar Asistencia</h2>
+			<form id="form-confirmacion">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+				<label for="telefono">Teléfono:</label>
+				<input type="tel" id="telefono" name="telefono" required pattern="[0-9\-\+\s]+">
+				<button type="submit" class="boton" style="font-family: 'Playfair Display', serif;">Enviar</button>
+			</form>
+		</div>
 	</div>
 
 

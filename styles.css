@@ -28,6 +28,14 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .titulo-40 {
@@ -151,7 +159,32 @@ body {
 .anim-text.visible {
   opacity: 1;
   transform: translateY(0);
-} 
+}
+
+.seccion {
+  background: #FCEFCB; /* Color actualizado */
+  border-radius: 16px;
+  margin: 0 auto 40px auto;
+  width: 90vw;           /* Cambiado a 90% del ancho de la pantalla */
+  max-width: 100vw;       /* Elimina el límite de ancho */
+  min-width: 0;
+  padding: 40px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  text-align: center;
+  min-height: 100vh; /* Hace que cada sección abarque al menos la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .encabezado {
   min-height: 100vh;
@@ -831,5 +864,67 @@ body {
   box-shadow: none;
   margin: 0 0 32px 0; /* 32px de espacio debajo de la imagen */
   display: block;
+} 
+
+/* Modal de confirmación de asistencia */
+.modal-confirmacion {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-contenido {
+  background: #fffbe9;
+  margin: auto;
+  padding: 32px 24px 24px 24px;
+  border-radius: 16px;
+  width: 90vw;
+  max-width: 400px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+  position: relative;
+  text-align: center;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 2rem;
+  color: #A86523;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#form-confirmacion label {
+  display: block;
+  margin: 16px 0 4px 0;
+  font-family: 'Playfair Display', serif;
+  color: #A86523;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+#form-confirmacion input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #D9A299;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+#form-confirmacion .boton {
+  width: 100%;
+  margin-top: 12px;
 } 
 

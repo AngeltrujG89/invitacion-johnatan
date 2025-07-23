@@ -7,18 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mostrarElementos = () => {
     const triggerBottom = window.innerHeight * 0.85;
+    const triggerTop = window.innerHeight * 0.15;
 
     secciones.forEach(sec => {
       const boxTop = sec.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) {
+      const boxBottom = sec.getBoundingClientRect().bottom;
+      // Si cualquier parte de la sección está en el viewport, mostrarla
+      if (boxTop < triggerBottom && boxBottom > triggerTop) {
         sec.classList.add('visible');
+      } else {
+        sec.classList.remove('visible');
       }
     });
 
     textos.forEach(txt => {
       const txtTop = txt.getBoundingClientRect().top;
-      if (txtTop < triggerBottom) {
+      const txtBottom = txt.getBoundingClientRect().bottom;
+      // Si cualquier parte del texto está en el viewport, mostrarlo
+      if (txtTop < triggerBottom && txtBottom > triggerTop) {
         txt.classList.add('visible');
+      } else {
+        txt.classList.remove('visible');
       }
     });
   };
@@ -70,4 +79,37 @@ document.addEventListener('DOMContentLoaded', () => {
   // Actualizar contador cada segundo
   actualizarContador();
   setInterval(actualizarContador, 1000);
+
+  // Modal Confirmar Asistencia
+  const abrirModalBtn = document.getElementById('abrir-modal-confirmacion');
+  const modal = document.getElementById('modal-confirmacion');
+  const cerrarModalBtn = document.getElementById('cerrar-modal-confirmacion');
+  const formConfirmacion = document.getElementById('form-confirmacion');
+
+  if (abrirModalBtn && modal && cerrarModalBtn && formConfirmacion) {
+    abrirModalBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = 'flex';
+    });
+    cerrarModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+    formConfirmacion.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      // Número de WhatsApp destino actualizado
+      const numeroDestino = '522281144559';
+      const mensaje = `Hola, soy ${nombre}, confirmo mi asistencia a la invitación de Johnatan. Mi teléfono es: ${telefono}`;
+      const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+      modal.style.display = 'none';
+      formConfirmacion.reset();
+    });
+  }
 }); 
