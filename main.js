@@ -52,6 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (invitadosNumero) invitadosNumero.classList.add('animar-entrada');
   if (invitadosLabels[1]) invitadosLabels[1].classList.add('animar-entrada');
   
+  // Cambiar número de invitados según parámetro de la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const invitadosParam = urlParams.get('invitados');
+  if (invitadosParam) {
+    document.querySelectorAll('.invitados-numero').forEach(el => {
+      el.textContent = invitadosParam;
+    });
+  }
+
   // Contador regresivo
   function actualizarContador() {
     const fechaEvento = new Date('November 15, 2025 16:00:00').getTime();
